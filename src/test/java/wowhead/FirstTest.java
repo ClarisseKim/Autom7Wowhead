@@ -17,7 +17,6 @@ public class FirstTest {
 		String browser = System.getProperty("browser");
 		// driver = new ChromeDriver();
 		// driver = new FirefoxDriver();
-		driver.manage().window().maximize();
 
 		if (browser.equalsIgnoreCase("Firefox")) {
 			System.setProperty("WebDriver.gecko.driver", "src/main/resources/driver/geckodriver.exe");
@@ -28,7 +27,7 @@ public class FirstTest {
 			System.setProperty("WebDriver.chrome.driver", "src/main/resources/driver/chromedriver.exe");
 			driver = new ChromeDriver();
 		}
-
+		driver.manage().window().maximize();
 	}
 
 	@Test
