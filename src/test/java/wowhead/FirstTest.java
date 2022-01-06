@@ -1,10 +1,8 @@
 package wowhead;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -14,7 +12,7 @@ public class FirstTest {
 	WebDriver driver;
 	WebDriverWait wait;
 
-	@BeforeEach
+	@Before
 	public void setUp() {
 		String browser = System.getProperty("browser");
 		// driver = new ChromeDriver();
@@ -60,7 +58,7 @@ public class FirstTest {
 
 	}
 
-	@AfterEach
+	@After
 	public void teardown() {
 		driver.quit();
 
